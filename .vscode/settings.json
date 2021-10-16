@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8537697f-e239-4eb9-9e67-2d1dd42cfd26/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/RigSchedule",
+    "appService.deploySubpath": "."
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Bienvenido</title>
+</head>
+
+<body>
+    <h1>Rig Schedule</h1>
+    <div>
+        Numero intervenciones: {{no_intervenciones}}
+    </div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td><a href="gestion_rigs">Gestionar Equipos</a></td>
+                </tr>
+            </tbody>
+
+        </table>
+        <a href="nueva_intervencion">Agregar Intervencion</a>
+    </div>
+    <div>
+        <style>
+            .demo {
+                width: 100%;
+                border: 1px dashed #C0C0C0;
+                border-collapse: collapse;
+                border-spacing: 7px;
+                padding: 4px;
+            }
+
+            .demo th {
+                border: 1px dashed #C0C0C0;
+                padding: 4px;
+                background: #F0F0F0;
+            }
+
+            .demo td {
+                border: 1px dashed #C0C0C0;
+                text-align: left;
+                padding: 4px;
+            }
+        </style>
+
+        <table class='demo'>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>EQUIPO</th>
+                    <th>VR</th>
+                    <th>GER</th>
+                    <th>CAMPO</th>
+                    <th>POZO</th>
+                    <th>TIPO DE POZO</th>
+                    <th>INICIO</th>
+                    <th>FIN</th>
+                    <th>DURACION</th>
+                    <th>ENTRADA EN PRODUCCION</th>
+                    <th>CAMPAÑA</th>
+                    <th>SUB-CAMPAÑA</th>
+                    <th>INTERVENCION</th>
+                    <th>CODIGO PIC</th>
+                    <th>RECURSO</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+            </thead>
+            <tbody>
+                {% for intervencion in intervenciones %}
+                <tr>
+                    <td>{{intervencion.id}}</td>
+                    <td>{{intervencion.rig}}</td>
+                    <td> {{intervencion.vicepresidencia}}</td>
+                    <td> {{intervencion.gerencia}}</td>
+                    <td>{{intervencion.campo}}</td>
+                    <td>{{intervencion.pozo}}</td>
+                    <td>{{intervencion.tipopozo}}</td>
+                    <td>{{intervencion.inicio}}</td>
+                    <td>{{intervencion.fin}}</td>
+                    <td>{{intervencion.duracion}}</td>
+                    <td>{{intervencion.entradaproduccion}}</td>
+                    <td>{{intervencion.campana}}</td>
+                    <td>{{intervencion.subcampana}}</td>
+                    <td>{{intervencion.actividad}}</td>
+                    <td>{{intervencion.codigopic}}</td>
+                    <td>{{intervencion.recurso}}</td>
+                    <td><a href="editar_intervencion/{{intervencion.id}}">Editar</a></td>
+                    <td><a href="eliminar_intervencion/{{initervencion.id}}">Eliminar</a></td>
+
+                </tr>
+
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+
+</html>

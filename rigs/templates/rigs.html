@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Rigs</title>
+</head>
+
+<body>
+    <h1>Gestion General de Equipos</h1>
+
+    <div>
+        Numero equipos: {{no_rigs}}
+    </div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td><a href="{% url 'index' %}">Ir a Gestion de intervenciones</a></td>
+                </tr>
+            </tbody>
+
+        </table>
+        <a href="nuevo_rig">Agregar Equipo</a>
+    </div>
+    <div>
+        <style>
+            .demo {
+                width: 100%;
+                border: 1px dashed #C0C0C0;
+                border-collapse: collapse;
+                border-spacing: 7px;
+                padding: 4px;
+            }
+
+            .demo th {
+                border: 1px dashed #C0C0C0;
+                padding: 4px;
+                background: #F0F0F0;
+            }
+
+            .demo td {
+                border: 1px dashed #C0C0C0;
+                text-align: left;
+                padding: 4px;
+            }
+        </style>
+
+        <table class='demo'>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Rig</th>
+                    <th>Empresa</th>
+                    <th>Potencia</th>
+                    <th>Tipo Equipo</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+            </thead>
+            <tbody>
+                {% for rig in rigs %}
+                <tr>
+                    <td>{{rig.id}}</td>
+                    <td> {{rig.rig}}</td>
+                    <td>{{rig.empresa}}</td>
+                    <td>{{rig.potencia}}</td>
+                    <td>{{rig.tipoequipo}}</td>
+                    <td><a href="editar_rig/{{rig.id}}">Editar</a></td>
+                    <td><a href="eliminar_rig/{{rig.id}}">Eliminar</a></td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+
+</html>

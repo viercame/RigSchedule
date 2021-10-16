@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'
+        <title>Editar Equipos</title>
+    </head>
+    <body>
+        <form method='POST'>
+            <h1>Editar Equipo</h1>
+            <table>
+                {{formaRig}}
+            </table>
+        <button type="submit">Enviar</button>
+        {% csrf_token %}
+
+        </form>
+    </body>
+</html>

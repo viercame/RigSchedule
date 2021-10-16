@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'
+        <title>Nueva Intervencion</title>
+    </head>
+    <body>
+        <form method='POST'>
+            <h1>Agregar Intervencion</h1>
+            <table>
+                {{formaIntervencion}}
+            </table>
+        <button type="submit">Enviar</button>
+        {% csrf_token %}
+
+        </form>
+    </body>
+</html>
