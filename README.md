@@ -1,6 +1,6 @@
 # RigSchedule
 
-Iniciativa para desarrollar RigShcedule para equipos de Oil&Gas usando Python y Django en Azure.
+Iniciativa para desarrollar RigShcedule para equipos de Oil&Gas usando Python y Django en Azure usnado Visual Studio Code
 
 
 ## Primera Versión.
